@@ -1,0 +1,44 @@
+﻿<Window x:Class="FontSamples.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FontSamples"
+        mc:Ignorable="d"
+        Title="Font Previewer" Height="450" Width="525">
+    <Border Margin="10" Background="AliceBlue">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <Label Grid.Row="0" Grid.Column="0" Content="Font Size:" FontSize="20" />
+                <ComboBox Name="FontSizeSelector" Grid.Row="0" Grid.Column="0" Width="40" Height="25" VerticalAlignment="Top" Margin="7" 
+                          SelectionChanged="FontSizeSelector_SelectionChanged"/>
+            </StackPanel>
+            <ComboBox Name="CBSamples" Grid.Row="1" Grid.Column="0" Width="480" Height="40"
+                      FontSize="20" SelectionChanged="CBSamples_SelectionChanged"/>
+
+
+            <TextBox Name="SampleText" Grid.Row="2" Grid.Column="0" Width="480" Height="40" Background="Cornsilk" 
+                        BorderBrush="Black" BorderThickness="1" TextChanged="SampleText_TextChanged"/>
+
+
+
+            <Border Grid.Row="3" Grid.Column="0" Width="480" Height="110" BorderBrush="Black" BorderThickness="1">
+                <ScrollViewer>
+                    <TextBlock Name="TextPreview" Grid.Row="2" Grid.Column="0" Width="480" Height="130" Background="Cornsilk"
+                           Margin="0" Padding="10" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                           ScrollViewer.CanContentScroll="True"/>
+                </ScrollViewer>
+            </Border>
+             
+        </Grid>
+    </Border>
+</Window>

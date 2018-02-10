@@ -32,10 +32,16 @@
 
 
             <Border Grid.Row="3" Grid.Column="0" Width="480" Height="110" BorderBrush="Black" BorderThickness="1">
-                <ScrollViewer>
-                    <TextBlock Name="TextPreview" Grid.Row="2" Grid.Column="0" Width="480" Height="130" Background="Cornsilk"
-                           Margin="0" Padding="10" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                           ScrollViewer.CanContentScroll="True"/>
+                <ScrollViewer  VerticalScrollBarVisibility="Auto"
+                               HorizontalScrollBarVisibility="Disabled">
+                    <TextBlock Name="TextPreview"
+                               Grid.Row="2" Grid.Column="0" 
+                               Width="480" Height="auto" MinHeight="108"
+                               Background="Cornsilk"
+                               Margin="0" Padding="10"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Top">
+                    </TextBlock>
                 </ScrollViewer>
             </Border>
              
